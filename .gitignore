@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Environment
+.env
+.venv/
+env/
+venv/
+ENV/
+.idea/
+.vscode/
+
+# Ignore React leftovers
+frontend/
+
+# Do NOT ignore models/ because Streamlit Cloud needs them for inference
+!models/

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.material-icons, .material-symbols-rounded {
+    font-family: 'Material Symbols Rounded', 'Material Icons', sans-serif !important;
+}
+
+/* Background Theme - Attractive Light Blue Glassmorphism */
+.stApp {
+    background: radial-gradient(circle at top left, #e0f2fe 0%, #f0f9ff 50%, #eff6ff 100%);
+    color: #0f172a;
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+    margin-top: auto;
+}
+
+/* Enlarge Sidebar Radio Buttons Navigation */
+div.row-widget.stRadio > div[role="radiogroup"] {
+    gap: 15px !important;
+}
+
+div[data-baseweb="radio"] > div {
+    padding: 8px 0px; 
+}
+
+div[data-baseweb="radio"] p {
+    font-size: 1.15rem !important;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* --- Flying 3D Widgets Animations --- */
+@keyframes flyWidget {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Premium Cards Strategy */
+.glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 24px;
+    color: #0c4a6e;
+    animation: flyWidget 6s ease-in-out infinite;
+}
+
+.glass-card:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    animation: none !important;
+    box-shadow: 0 30px 60px rgba(2, 132, 199, 0.25), 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: rgba(56, 189, 248, 0.8);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Top Stats Cards */
+.stat-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 249, 255, 0.6) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 4px solid #0284c7;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #0c4a6e;
+    animation: flyWidget 7s ease-in-out infinite;
+    animation-delay: 1s; /* stagger the flying */
+}
+
+.stat-card:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    animation: none !important;
+    box-shadow: 0 30px 60px rgba(2, 132, 199, 0.25), 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.stat-card h3 {
+    color: #0284c7 !important;
+}
+
+.stat-card p {
+    color: #64748b !important;
+}
+
+/* Form Inputs */
+div[data-baseweb="input"] > div, div[data-baseweb="select"] > div {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(203, 213, 225, 0.8) !important;
+    border-radius: 8px !important;
+    color: #334155 !important;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+div[data-baseweb="input"] > div:hover, div[data-baseweb="select"] > div:hover {
+    border-color: #7dd3fc !important;
+    background-color: #ffffff !important;
+}
+
+div[data-baseweb="input"] > div:focus-within, div[data-baseweb="select"] > div:focus-within {
+    border-color: #0ea5e9 !important;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2) !important;
+    background-color: #ffffff !important;
+}
+
+/* Primary Button Styling */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 1.15rem !important;
+    padding: 14px 32px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25) !important;
+    letter-spacing: 0.5px;
+}
+
+button[kind="primary"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 25px rgba(2, 132, 199, 0.4) !important;
+    background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%) !important;
+}
+
+/* Secondary Buttons */
+button[kind="secondary"] {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(203, 213, 225, 0.8) !important;
+    border-radius: 8px !important;
+    color: #475569 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+button[kind="secondary"]:hover {
+    background: #ffffff !important;
+    border-color: #94a3b8 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Container & Native Border Styling */
+div[data-testid="stForm"], div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 249, 255, 0.4) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1) !important;
+    margin-bottom: 24px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    animation: flyWidget 8s ease-in-out infinite;
+    animation-delay: 2s; /* stagger */
+}
+
+div[data-testid="stForm"]:hover, div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    animation: none !important;
+    box-shadow: 0 25px 50px rgba(2, 132, 199, 0.2), 0 10px 15px rgba(0, 0, 0, 0.05) !important;
+    border-color: rgba(56, 189, 248, 0.6) !important;
+}
+
+/* Prediction Result Cards */
+.result-card-high {
+    background: linear-gradient(135deg, rgba(254, 226, 226, 0.95) 0%, rgba(254, 242, 242, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(248, 113, 113, 0.5);
+    border-left: 8px solid #ef4444;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(239, 68, 68, 0.15), inset 0 0 20px rgba(255,255,255,0.8);
+    animation: pulseRed 2.5s infinite;
+}
+
+.result-card-low {
+    background: linear-gradient(135deg, rgba(220, 252, 231, 0.95) 0%, rgba(240, 253, 244, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(74, 222, 128, 0.5);
+    border-left: 8px solid #22c55e;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.15), inset 0 0 20px rgba(255,255,255,0.8);
+}
+
+@keyframes pulseRed {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); }
+    70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Progress bar container */
+.stProgress > div > div > div > div {
+    background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+}
+
+.progress-high > div > div > div > div {
+    background: linear-gradient(90deg, #b91c1c 0%, #ef4444 100%) !important;
+}
+
+.progress-low > div > div > div > div {
+    background: linear-gradient(90deg, #15803d 0%, #22c55e 100%) !important;
+}
+
+/* Metric text */
+div[data-testid="stMetricValue"] {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    letter-spacing: -1px;
+}
+div[data-testid="stMetricLabel"] {
+    color: #64748b !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    background: linear-gradient(90deg, #0f172a, #0284c7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Hide Streamlit branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Custom Footer */
+.custom-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #475569;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+/* AI Insights panel styling inside the result card */
+.ai-insights {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7));
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 25px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-insights::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+}
+
+.ai-insights h4 {
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.ai-insights p, .ai-insights ul {
+    color: #334155;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.ai-insights li {
+    margin-bottom: 8px;
+}
+
+/* Ensure text in selectboxes and inputs are readable in light mode */
+.stSelectbox label, .stNumberInput label {
+    color: #1e293b !important;
+    font-weight: 500;
+}
